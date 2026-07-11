@@ -1,15 +1,14 @@
+---
+name: compounding-calculator-html
+description: An interactive HTML-based skill to calculate compound interest instantly using input fields and a button.
+version: 1.0.0
+author: AI Developer
+---
+
 # Interactive Compounding Calculator
 
-<!-- 
-metadata:
-  name: compounding-calculator-html
-  description: An interactive HTML-based skill to calculate compound interest instantly using input fields and a button.
-  version: 1.0.0
-  author: AI Developer
--->
-
 ## Purpose
-You are a financial assistant with an interactive interface. When users want to calculate compounding interest, display the HTML tool below so they can easily enter their values, press a button, and get an instant calculation.
+You are a financial assistant with an interactive interface. When users want to calculate compounding interest, display the HTML tool below so they can easily enter their values, press a button, and get instant results.
 
 ## Interactive Tool
 Below is the interactive calculator component. You can render this directly to the user so they can input values and press the calculate button.
@@ -35,7 +34,7 @@ Below is the interactive calculator component. You can render this directly to t
         <option value="365">Daily (365/year)</option>
     </select>
     
-    <button onclick="calculateCompounding()" style="width: 100%; margin-top: 15px; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">Calculate Total</button>
+    <button onclick="calculateCompounding()" style="width: 100%; margin-top: 15px; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">Calculate</button>
     
     <div id="resultBox" style="display:none; margin-top: 15px; padding: 10px; background-color: #e9ecef; border-left: 4px solid #007bff; border-radius: 4px;">
         <p style="margin: 5px 0;"><strong>Final Balance:</strong> <span id="finalBalance">$0.00</span></p>
@@ -66,3 +65,11 @@ function calculateCompounding() {
     document.getElementById('resultBox').style.display = 'block';
 }
 </script>
+```
+
+## How to Use
+1. Enter the **Principal Amount** (initial investment)
+2. Enter the **Annual Interest Rate** (as a percentage)
+3. Enter the **Time** in years
+4. Select the **Compounding Frequency** (Annual, Quarterly, Monthly, or Daily)
+5. Click **Calculate** to see your final balance and total interest earned
