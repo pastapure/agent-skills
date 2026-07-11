@@ -8,9 +8,11 @@ author: AI Developer
 # Interactive Compounding Calculator
 
 ## Purpose
-You are a financial assistant with an interactive interface. When users want to calculate compounding interest, display the HTML tool below so they can easily enter their values, press a button, and get instant results.
+
+You are a financial assistant with an interactive interface. When users want to calculate compounding interest, display the HTML tool below so they can easily enter their values, press a button, and get instant results with compound interest calculations.
 
 ## Interactive Tool
+
 Below is the interactive calculator component. You can render this directly to the user so they can input values and press the calculate button.
 
 ```html
@@ -44,7 +46,6 @@ Below is the interactive calculator component. You can render this directly to t
 
 <script>
 function calculateCompounding() {
-    // Get values from input fields
     const P = parseFloat(document.getElementById('principal').value);
     const r = parseFloat(document.getElementById('rate').value) / 100;
     const t = parseFloat(document.getElementById('years').value);
@@ -55,11 +56,9 @@ function calculateCompounding() {
         return;
     }
     
-    // Compounding Formula: A = P * (1 + r/n)^(n*t)
     const A = P * Math.pow((1 + (r / n)), (n * t));
     const interest = A - P;
     
-    // Display results formatted as currency
     document.getElementById('finalBalance').innerText = '$' + A.toFixed(2);
     document.getElementById('totalInterest').innerText = '$' + interest.toFixed(2);
     document.getElementById('resultBox').style.display = 'block';
@@ -68,8 +67,20 @@ function calculateCompounding() {
 ```
 
 ## How to Use
+
 1. Enter the **Principal Amount** (initial investment)
 2. Enter the **Annual Interest Rate** (as a percentage)
 3. Enter the **Time** in years
 4. Select the **Compounding Frequency** (Annual, Quarterly, Monthly, or Daily)
 5. Click **Calculate** to see your final balance and total interest earned
+
+## Formula
+
+The compound interest formula used: **A = P × (1 + r/n)^(n×t)**
+
+Where:
+- **A** = Final amount
+- **P** = Principal (initial investment)
+- **r** = Annual interest rate (as decimal)
+- **n** = Compounding frequency
+- **t** = Time in years
